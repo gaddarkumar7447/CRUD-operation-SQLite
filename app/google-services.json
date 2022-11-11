@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "291492955503",
+    "project_id": "shoppeal-tech",
+    "storage_bucket": "shoppeal-tech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291492955503:android:86c077544a29b09397d49a",
+        "android_client_info": {
+          "package_name": "com.example.shoppeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291492955503-loimjl84hsqb6a8hujs3vb7jp7qr872k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhv6RZt0929SoeKDpkgFWEa_B4PG9TDM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291492955503-loimjl84hsqb6a8hujs3vb7jp7qr872k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
