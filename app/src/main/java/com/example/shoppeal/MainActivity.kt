@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                 mloginpassword.error = "password is empty"
             } else {
                 progressBar.visibility = View.VISIBLE
-                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
                         if (task.isSuccessful) {
                             checkMainVerification()
                         } else {

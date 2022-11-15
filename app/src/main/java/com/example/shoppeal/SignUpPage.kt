@@ -18,6 +18,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.auth.api.signin.GoogleSignInResult
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -41,7 +42,8 @@ class SignUpPage : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         })
 
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(R.string.default_web_client_id.toString()).requestEmail().build()
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(R.string.default_web_client_id.toString()).requestEmail().build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         findViewById<CardView>(R.id.signInWithFaceBook).setOnClickListener(View.OnClickListener {
@@ -90,7 +92,27 @@ class SignUpPage : AppCompatActivity() {
 
     private fun signInWithGoogle() {
         val signInIntent = googleSignInClient.signInIntent
-        launcher.launch(signInIntent)
+        /*launcher.launch(signInIntent)*/
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            val account = task.getResult(ApiException::class.java)
+            val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+            firebaseauth.signInWithCredential(credential).addOnCompleteListener(
+                OnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        startActivity(Intent(this, Employee::class.java))
+                        Toast.makeText(this, "Successful", Toast.LENGTH_SHORT).show()
+
+                    } else {
+                        Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                    }
+                })
+        }
     }
 
     private fun firebaseAuthWithGoogle(idToken: String) {
@@ -105,12 +127,13 @@ class SignUpPage : AppCompatActivity() {
             }
     }
 
-    private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { results ->
+    private val launcher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { results ->
             if (results.resultCode == Activity.RESULT_OK) {
                 val task = GoogleSignIn.getSignedInAccountFromIntent(results.data)
                 handleResult(task)
             }
-    }
+        }
 
     private fun handleResult(task: Task<GoogleSignInAccount>) {
         if (task.isSuccessful) {
