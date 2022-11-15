@@ -20,8 +20,8 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         val DROP_TABLE = "DROP TABLE IF EXISTS $TABLE_NAME"
         p0?.execSQL(DROP_TABLE)
-
     }
+
     companion object{
         private val DB_NAME = "task"
         private val DB_VERSION = 1

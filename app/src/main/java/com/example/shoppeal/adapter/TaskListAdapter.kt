@@ -29,7 +29,7 @@ class TaskListAdapter(taskList : List<TaskListModel>, internal val context: Cont
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val tasks = taskList[position]
         holder.name.text = tasks.name
-        holder.details.text = tasks.details
+        holder.details.text = tasks.details.toString()
         holder.btn_edit.setOnClickListener(View.OnClickListener {
             val i = Intent(context.applicationContext, AddTask::class.java)
             i.putExtra("Mode", "E")
