@@ -38,11 +38,12 @@ class AddTask : AppCompatActivity() {
             details.setText(tasks.details)
 
         }else{
-            //add the date
+            //add the data
             isEditMode = false
             save.text = "Save Data"
             delete.visibility = View.GONE
         }
+
         save.setOnClickListener(View.OnClickListener {
             var success : Boolean = false
             val taskListModel = TaskListModel()
@@ -51,12 +52,11 @@ class AddTask : AppCompatActivity() {
                 taskListModel.id = intent.getIntExtra("Id", 0)
                 taskListModel.name = name.text.toString()
                 taskListModel.details = details.text.toString()
-
                 success = dbHandler!!.updateTask(taskListModel) as Boolean
             }else{
                 //insert
-                taskListModel.name = name.toString()
-                taskListModel.details = details.toString()
+                taskListModel.name = name.text.toString()
+                taskListModel.details = details.text.toString()
                 success = dbHandler!!.addTask(taskListModel) as Boolean
             }
             if (success){
@@ -78,5 +78,9 @@ class AddTask : AppCompatActivity() {
             }
             dialog.show()
         })
+    }
+
+    override fun onBackPressed() {
+        super.finish()
     }
 }

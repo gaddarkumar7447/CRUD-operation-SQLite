@@ -4,6 +4,7 @@ import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.database.DatabaseUtils
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.icu.number.IntegerWidth
@@ -70,7 +71,7 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
         val cursor = db.rawQuery(selectQuery,  null)
         cursor?.moveToFirst()
         task.id = Integer.parseInt(cursor.getString(cursor.getColumnIndex(ID)))
-        task.name = cursor.getString(cursor.getColumnIndex(TABLE_NAME))
+        task.name = cursor.getString(cursor.getColumnIndex(TASK_NAME))
         task.details = cursor.getString(cursor.getColumnIndex(TASK_DETAILS))
         cursor.close()
         return task
@@ -78,7 +79,7 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
 
     fun deleteTask(id : Int):Boolean{
         val db = this.writableDatabase
-        val success : Long = db.delete(TABLE_NAME, ID + "=?", arrayOf(id.toString())).toLong()
+        val success : Long = db.delete(TABLE_NAME, "$ID=?", arrayOf(id.toString())).toLong()
         db.close()
         return Integer.parseInt("$success") != -1
     }
@@ -88,10 +89,9 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
         val contentValues = ContentValues()
         contentValues.put(TASK_NAME, tasks.name)
         contentValues.put(TASK_DETAILS, tasks.details)
-        val success = db.update(TABLE_NAME, contentValues, ID + "=?", arrayOf(tasks.id.toString())).toLong()
+        val success = db.update(TABLE_NAME, contentValues, "$ID=?", arrayOf(tasks.id.toString())).toLong()
         db.close()
         return Integer.parseInt("$success") != -1
     }
-
 }
 

@@ -11,10 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppeal.adapter.TaskListAdapter
 import com.example.shoppeal.dataBase.DataBaseHelper
 import com.example.shoppeal.model.TaskListModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Employee : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
-    lateinit var btn_add1 : Button
+    lateinit var btn_add1 : FloatingActionButton
     var taskListAdapter : TaskListAdapter ?= null
     var dbHandler : DataBaseHelper ?= null
     var taskList : List<TaskListModel> = ArrayList<TaskListModel>()
@@ -33,6 +34,7 @@ class Employee : AppCompatActivity() {
         fetchList()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun fetchList(){
         taskList = dbHandler!!.getAllTask()
         taskListAdapter = TaskListAdapter(taskList, applicationContext)

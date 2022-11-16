@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_margin="8dp"
+        android:layout_margin="5dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
@@ -14,17 +15,32 @@
         
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_margin="6dp"
+            android:layout_margin="5dp"
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:text="Name : Employee Name"
-                android:id="@+id/txt_name"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"/>
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Name : Employee Name"
+                    android:id="@+id/txt_name"
+                    android:layout_weight="3"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="1"
+                    android:id="@+id/employeeId"
+                    android:layout_weight="0"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -34,16 +50,6 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_height="wrap_content"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:text="Edit"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/edit_button"
-                android:layout_height="wrap_content"/>
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

@@ -23,7 +23,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ForgetPassword"
+            android:name=".signInPage.ForgetPassword"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -38,7 +38,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpPage"
+            android:name=".signInPage.SignUpPage"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -46,7 +46,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".signInPage.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
