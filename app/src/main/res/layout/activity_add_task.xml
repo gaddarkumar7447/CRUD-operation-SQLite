@@ -12,31 +12,165 @@
         android:id="@+id/et_name"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Enter name"
-        android:textColorHint="@color/black"
+        android:hint="Enter full name"
+        android:background="@drawable/back_boarder"
+        android:textColorHint="#B8B4B4"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/hori"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/et_name"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/phoneNumber"
+            android:padding="10dp"
+            android:background="@drawable/back_boarder"
+            android:hint="Phone"
+            android:layout_weight="5"
+            android:layout_marginRight="10dp"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="#B8B4B4"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_weight="0"
+            android:id="@+id/country"
+            android:hint="Country"
+            android:background="@drawable/back_boarder"
+            android:textColorHint="#B8B4B4"
+            android:padding="5dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
         android:id="@+id/et_details"
-        android:layout_below="@+id/et_name"
+        android:background="@drawable/back_boarder"
+        android:layout_below="@+id/hori"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Enter details"
-        android:textColorHint="@color/black"
+        android:hint="Address details"
+        android:textColorHint="#B8B4B4"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/city"
+        android:background="@drawable/back_boarder"
+        android:layout_below="@+id/et_details"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="City"
+        android:textColorHint="#B8B4B4"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/horix"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/city"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/state"
+            android:padding="10dp"
+            android:background="@drawable/back_boarder"
+            android:hint="State"
+            android:layout_weight="5"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#B8B4B4"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_weight="0"
+            android:id="@+id/pincode"
+            android:hint="Pincode"
+            android:inputType="number"
+            android:background="@drawable/back_boarder"
+            android:textColorHint="#B8B4B4"
+            android:padding="5dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/Email"
+        android:background="@drawable/back_boarder"
+        android:layout_below="@+id/horix"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Email"
+        android:textColorHint="#B8B4B4"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/horixx"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/Email"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/birthday"
+            android:padding="10dp"
+            android:background="@drawable/back_boarder"
+            android:hint="Birthday"
+            android:layout_weight="5"
+            android:layout_marginRight="10dp"
+            android:inputType="date"
+            android:textColor="@color/black"
+            android:textColorHint="#B8B4B4"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_weight="0"
+            android:id="@+id/gender"
+            android:hint="Gender"
+            android:background="@drawable/back_boarder"
+            android:padding="5dp"
+            android:textColorHint="#B8B4B4"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+
 
     <Button
         android:layout_width="wrap_content"
         android:text="Save"
         android:id="@+id/btn_save"
-        android:layout_below="@+id/et_details"
+        android:layout_below="@+id/horixx"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"/>

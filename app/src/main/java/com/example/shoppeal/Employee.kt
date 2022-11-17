@@ -22,7 +22,7 @@ class Employee : AppCompatActivity() {
     var linearLayoutManager : LinearLayoutManager ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.hide()
+        supportActionBar?.title = "All employee details"
         setContentView(R.layout.activity_employee)
         recyclerView = findViewById(R.id.rv_list)
         btn_add1 = findViewById(R.id.ft_add_item)

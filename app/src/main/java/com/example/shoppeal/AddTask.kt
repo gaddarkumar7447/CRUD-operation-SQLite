@@ -23,8 +23,17 @@ class AddTask : AppCompatActivity() {
         setContentView(R.layout.activity_add_task)
         name = findViewById(R.id.et_name)
         details = findViewById(R.id.et_details)
+        val phone : EditText = findViewById(R.id.phoneNumber)
+        val country : EditText = findViewById(R.id.country)
+        val city : EditText = findViewById(R.id.city)
+        val state : EditText = findViewById(R.id.state)
+        val pinCode : EditText = findViewById(R.id.pincode)
+        val email : EditText = findViewById(R.id.Email)
+        val birthDay : EditText = findViewById(R.id.birthday)
+        val gender : EditText = findViewById(R.id.gender)
         save = findViewById(R.id.btn_save)
         delete = findViewById(R.id.btn_del)
+
         supportActionBar?.hide()
 
         dbHandler = DataBaseHelper(this)
@@ -52,11 +61,27 @@ class AddTask : AppCompatActivity() {
                 taskListModel.id = intent.getIntExtra("Id", 0)
                 taskListModel.name = name.text.toString()
                 taskListModel.details = details.text.toString()
+                taskListModel.phone = phone.text.toString().toInt()
+                taskListModel.country = country.text.toString()
+                taskListModel.city = city.text.toString()
+                taskListModel.state = state.text.toString()
+                taskListModel.pinCode = pinCode.text.toString()
+                taskListModel.email = email.text.toString()
+                taskListModel.birthday = birthDay.text.toString()
+                taskListModel.gender = gender.text.toString()
                 success = dbHandler!!.updateTask(taskListModel) as Boolean
             }else{
                 //insert
                 taskListModel.name = name.text.toString()
                 taskListModel.details = details.text.toString()
+                taskListModel.phone = phone.text.toString().toInt()
+                taskListModel.country = country.text.toString()
+                taskListModel.city = city.text.toString()
+                taskListModel.state = state.text.toString()
+                taskListModel.pinCode = pinCode.text.toString()
+                taskListModel.email = email.text.toString()
+                taskListModel.birthday = birthDay.text.toString()
+                taskListModel.gender = gender.text.toString()
                 success = dbHandler!!.addTask(taskListModel) as Boolean
             }
             if (success){
