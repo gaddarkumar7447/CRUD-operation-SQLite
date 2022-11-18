@@ -50,6 +50,16 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/phone"
+                android:layout_marginTop="5dp"
+                android:text="phone: "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

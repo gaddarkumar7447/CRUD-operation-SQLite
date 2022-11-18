@@ -4,7 +4,7 @@ class TaskListModel {
     var id : Int = 0
     var name : String = ""
     var details : String = ""
-    var phone : Int = 0
+    var phone : String = ""
     var country : String = ""
     var city : String = ""
     var state : String = ""
@@ -12,6 +12,4 @@ class TaskListModel {
     var email : String = ""
     var birthday : String = ""
     var gender : String = ""
-
-
 }

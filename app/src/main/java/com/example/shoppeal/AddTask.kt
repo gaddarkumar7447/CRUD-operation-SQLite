@@ -45,6 +45,14 @@ class AddTask : AppCompatActivity() {
             val tasks : TaskListModel = dbHandler!!.getTask(intent.getIntExtra("Id", 0))
             name.setText(tasks.name)
             details.setText(tasks.details)
+            phone.setText(tasks.phone)
+            country.setText(tasks.country)
+            city.setText(tasks.city)
+            state.setText(tasks.state)
+            pinCode.setText(tasks.pinCode)
+            email.setText(tasks.email)
+            birthDay.setText(tasks.birthday)
+            gender.setText(tasks.gender)
 
         }else{
             //add the data
@@ -61,7 +69,7 @@ class AddTask : AppCompatActivity() {
                 taskListModel.id = intent.getIntExtra("Id", 0)
                 taskListModel.name = name.text.toString()
                 taskListModel.details = details.text.toString()
-                taskListModel.phone = phone.text.toString().toInt()
+                taskListModel.phone = phone.text.toString()
                 taskListModel.country = country.text.toString()
                 taskListModel.city = city.text.toString()
                 taskListModel.state = state.text.toString()
@@ -74,7 +82,7 @@ class AddTask : AppCompatActivity() {
                 //insert
                 taskListModel.name = name.text.toString()
                 taskListModel.details = details.text.toString()
-                taskListModel.phone = phone.text.toString().toInt()
+                taskListModel.phone = phone.text.toString()
                 taskListModel.country = country.text.toString()
                 taskListModel.city = city.text.toString()
                 taskListModel.state = state.text.toString()

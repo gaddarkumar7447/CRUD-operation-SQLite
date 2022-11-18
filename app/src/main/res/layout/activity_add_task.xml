@@ -7,18 +7,33 @@
     android:background="#e9e9e9"
     tools:context=".AddTask">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:id="@+id/et_name"
-        android:layout_marginLeft="20dp"
+        android:id="@+id/item1"
         android:layout_marginRight="20dp"
-        android:hint="Enter full name"
-        android:background="@drawable/back_boarder"
-        android:textColorHint="#B8B4B4"
-        android:padding="10dp"
-        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_height="wrap_content" />
+        android:hint="Full Name"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/et_name"
+            android:textColorHint="#B8B4B4"
+            android:padding="13dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,60 +42,124 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/et_name"
+        android:layout_below="@+id/item1"
         android:layout_height="wrap_content">
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:id="@+id/phoneNumber"
-            android:padding="10dp"
-            android:background="@drawable/back_boarder"
             android:hint="Phone"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
             android:layout_weight="5"
             android:layout_marginRight="10dp"
-            android:inputType="number"
-            android:textColor="@color/black"
-            android:textColorHint="#B8B4B4"
-            android:layout_height="wrap_content"/>
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/phoneNumber"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="#B8B4B4"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="110dp"
-            android:layout_weight="0"
-            android:id="@+id/country"
             android:hint="Country"
-            android:background="@drawable/back_boarder"
-            android:textColorHint="#B8B4B4"
-            android:padding="5dp"
-            android:layout_height="match_parent"/>
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_weight="0"
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:id="@+id/country"
+                android:singleLine="true"
+                android:hint="Country"
+                android:textColor="@color/black"
+                android:textColorHint="#B8B4B4"
+                android:padding="13dp"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:id="@+id/et_details"
-        android:background="@drawable/back_boarder"
-        android:layout_below="@+id/hori"
-        android:layout_marginLeft="20dp"
+        android:id="@+id/item2"
+        android:layout_below="@id/hori"
         android:layout_marginRight="20dp"
-        android:hint="Address details"
-        android:textColorHint="#B8B4B4"
-        android:padding="10dp"
-        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"/>
+        android:hint="Address"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
 
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/et_details"
+            android:textColorHint="#B8B4B4"
+            android:padding="13dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:id="@+id/city"
-        android:background="@drawable/back_boarder"
-        android:layout_below="@+id/et_details"
-        android:layout_marginLeft="20dp"
+        android:id="@+id/item3"
+        android:layout_below="@id/item2"
         android:layout_marginRight="20dp"
-        android:hint="City"
-        android:textColorHint="#B8B4B4"
-        android:padding="10dp"
-        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"/>
+        android:hint="City"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/city"
+            android:singleLine="true"
+            android:layout_below="@+id/item2"
+            android:textColorHint="#B8B4B4"
+            android:padding="13dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,45 +168,92 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/city"
+        android:layout_below="@+id/item3"
         android:layout_height="wrap_content">
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:id="@+id/state"
-            android:padding="10dp"
-            android:background="@drawable/back_boarder"
             android:hint="State"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
             android:layout_weight="5"
             android:layout_marginRight="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="#B8B4B4"
-            android:layout_height="wrap_content"/>
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/state"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#B8B4B4"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="110dp"
+            android:hint="PinCode"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
             android:layout_weight="0"
-            android:id="@+id/pincode"
-            android:hint="Pincode"
-            android:inputType="number"
-            android:background="@drawable/back_boarder"
-            android:textColorHint="#B8B4B4"
-            android:padding="5dp"
-            android:layout_height="match_parent"/>
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/pincode"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="#B8B4B4"
+                android:padding="13dp"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:id="@+id/Email"
-        android:background="@drawable/back_boarder"
-        android:layout_below="@+id/horix"
-        android:layout_marginLeft="20dp"
+        android:id="@+id/item4"
+        android:layout_below="@id/horix"
         android:layout_marginRight="20dp"
-        android:hint="Email"
-        android:textColorHint="#B8B4B4"
-        android:padding="10dp"
-        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"/>
+        android:hint="Email"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/Email"
+            android:textColorHint="#B8B4B4"
+            android:padding="13dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -136,35 +262,62 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/Email"
+        android:layout_below="@+id/item4"
         android:layout_height="wrap_content">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:id="@+id/birthday"
-            android:padding="10dp"
-            android:background="@drawable/back_boarder"
-            android:hint="Birthday"
+            android:hint="BirthDay"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
             android:layout_weight="5"
             android:layout_marginRight="10dp"
-            android:inputType="date"
-            android:textColor="@color/black"
-            android:textColorHint="#B8B4B4"
-            android:layout_height="wrap_content"/>
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/birthday"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="#B8B4B4"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="110dp"
-            android:layout_weight="0"
-            android:id="@+id/gender"
             android:hint="Gender"
-            android:background="@drawable/back_boarder"
-            android:padding="5dp"
-            android:textColorHint="#B8B4B4"
-            android:layout_height="match_parent"/>
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_weight="0"
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/gender"
+                android:textColor="@color/black"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:textColorHint="#B8B4B4"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
-
-
-
 
     <Button
         android:layout_width="wrap_content"
@@ -183,6 +336,5 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="5dp"
         android:layout_height="wrap_content"/>
-
 
 </RelativeLayout>

@@ -33,6 +33,7 @@ class TaskListAdapter(taskList : List<TaskListModel>, internal val context: Cont
         holder.name.text = tasks.name
         holder.details.text = tasks.details
         holder.employeeId.text = tasks.id.toString()
+        holder.phone.text = tasks.phone
         holder.cardView.setOnClickListener(View.OnClickListener {
             val i = Intent(context, AddTask::class.java)
             i.putExtra("Mode", "E")
@@ -51,5 +52,6 @@ class TaskListAdapter(taskList : List<TaskListModel>, internal val context: Cont
         val details : TextView = view.findViewById(R.id.txt_details)
         val cardView : CardView = view.findViewById(R.id.cardView)
         val employeeId : TextView = view.findViewById(R.id.employeeId)
+        val phone : TextView = view.findViewById(R.id.phone)
     }
 }
