@@ -40,7 +40,7 @@ class AddTask : AppCompatActivity() {
         if (intent != null && intent.getStringExtra("Mode") == "E"){
             //update the data
             isEditMode = true
-            save.text = "Update date"
+            save.text = "Update Data"
             delete.visibility = View.VISIBLE
             val tasks : TaskListModel = dbHandler!!.getTask(intent.getIntExtra("Id", 0))
             name.setText(tasks.name)
