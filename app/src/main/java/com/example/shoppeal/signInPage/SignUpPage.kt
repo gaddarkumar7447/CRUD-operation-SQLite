@@ -1,8 +1,6 @@
-package com.example.shoppeal
+package com.example.shoppeal.signInPage
 
-import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.Instrumentation.ActivityResult
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -14,11 +12,12 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import com.example.shoppeal.Employee
+import com.example.shoppeal.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.auth.api.signin.GoogleSignInResult
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -162,6 +161,10 @@ class SignUpPage : AppCompatActivity() {
     companion object {
         const val RC_SIGN_IN = 1001
         const val EXTRA_NAME = "EXTRA_NAME"
+    }
+
+    override fun onBackPressed() {
+        super.finish()
     }
 }
 

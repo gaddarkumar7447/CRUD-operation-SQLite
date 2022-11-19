@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.shoppeal.AddTask
@@ -30,11 +32,14 @@ class TaskListAdapter(taskList : List<TaskListModel>, internal val context: Cont
         val tasks = taskList[position]
         holder.name.text = tasks.name
         holder.details.text = tasks.details
-        holder.btn_edit.setOnClickListener(View.OnClickListener {
-            val i = Intent(context.applicationContext, AddTask::class.java)
+        holder.employeeId.text = tasks.id.toString()
+        holder.phone.text = tasks.phone
+        holder.cardView.setOnClickListener(View.OnClickListener {
+            val i = Intent(context, AddTask::class.java)
             i.putExtra("Mode", "E")
             i.putExtra("Id", tasks.id)
-            context.applicationContext.startActivity(i)
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(i)
         })
     }
 
@@ -45,6 +50,8 @@ class TaskListAdapter(taskList : List<TaskListModel>, internal val context: Cont
     class TaskViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val name : TextView = view.findViewById(R.id.txt_name)
         val details : TextView = view.findViewById(R.id.txt_details)
-        val btn_edit : Button = view.findViewById(R.id.edit_button)
+        val cardView : CardView = view.findViewById(R.id.cardView)
+        val employeeId : TextView = view.findViewById(R.id.employeeId)
+        val phone : TextView = view.findViewById(R.id.phone)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.shoppeal
+package com.example.shoppeal.signInPage
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.shoppeal.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-
 
 class ForgetPassword : AppCompatActivity() {
     lateinit var firebaseauth: FirebaseAuth
@@ -42,5 +42,8 @@ class ForgetPassword : AppCompatActivity() {
                     })
             }
         }
+    }
+    override fun onBackPressed() {
+        super.finish()
     }
 }

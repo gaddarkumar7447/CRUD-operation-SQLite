@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#f9f9f9"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".signInPage.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,69 +148,4 @@
             android:textSize="15sp"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="250dp"
-        android:id="@+id/linerLayout"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:id="@+id/text"
-            android:text="Let's get started"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:id="@+id/text11"
-            android:text="Never a better time than now to start"
-            android:textStyle="normal"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_below="@+id/linerLayout"
-        android:id="@+id/signUp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="SignUp"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:background="@drawable/background_boder"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:layout_height="44dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/login"
-        android:layout_below="@+id/signUp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="LogIn"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:padding="5dp"
-        android:background="@drawable/background_boder"
-        android:textStyle="bold"
-        android:layout_height="44dp"/>-->
-
-
-
 </RelativeLayout>
